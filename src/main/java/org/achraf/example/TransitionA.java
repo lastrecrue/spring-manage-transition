@@ -14,4 +14,9 @@ public class TransitionA implements Transition {
 
 	}
 
+	@Override
+	public boolean canDoTransition() {
+		return true;
+	}
+
 }

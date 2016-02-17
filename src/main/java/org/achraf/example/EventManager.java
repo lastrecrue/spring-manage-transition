@@ -17,7 +17,9 @@ public class EventManager {
 		for (Class<?> class1 : classs) {
 			Transition transition = (Transition) applicationContext
 					.getBean(class1);
-			transition.doTransition();
+			if (transition.canDoTransition()) {
+				transition.doTransition();
+			}
 		}
 	}
 }
